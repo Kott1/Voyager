@@ -1,0 +1,538 @@
+/* Загальні стилі */
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Helvetica';
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+.container {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.exploreBtn {
+    height: 35px;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px 0 10px;
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.exploreBtn:hover {
+    background-color: orange;
+    color: black;
+}
+
+.exploreBtn:hover .circle {
+    background-color: black;
+    transform: rotate(-45deg);
+}
+
+.exploreBtn:hover .arrowSvg {
+    fill: orange;
+}
+
+.circle,
+.orangeCircle {
+    border-radius: 50%;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.cardBoxHeader,
+.ticketBoxHeader,
+.ticketNumberTxt,
+.cardInfoTxt,
+.footerHeader {
+    font-size: 35px;
+}
+
+.arrowSvg {
+    right: 5px;
+    position: absolute;
+    transition: fill 0.3s ease;
+}
+
+/* Стилі header */
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/bg_home_sea.jpg');
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    position: fixed;
+    top: 30px;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1380px;
+    align-items: flex-start;
+}
+
+.mainMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: #ECEBE9;
+    border-radius: 16px;
+    flex-grow: 2;
+    padding: 7px 10px;
+}
+
+.pages {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.currencyBtn {
+    padding: 7px 18px;
+    height: 35px;
+    background-color: #F3A522;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Helvetica';
+    font-size: 18px;
+    color: black;
+    outline: none;
+}
+
+.currencyBtn option {
+    font-family: 'Helvetica';
+    font-size: 18px;
+    color: black;
+}
+
+.rotate180 {
+    rotate: 180deg;
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.headerTxt {
+    font-size: 80px;
+}
+
+.whiteColor {
+    color: white;
+}
+
+.burgerMenu {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .menu {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: flex;
+        gap: 15px;
+        position: fixed;
+        top: 30px;
+        z-index: 1000;
+        width: 100%;
+        max-width: 1380px;
+        align-items: flex-start;
+    }
+
+    .menuIcon {
+        width: 100%;
+        height: 9px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menuIcon.toggleMargin {
+        margin: 13px 0 30px;
+    }
+
+    .line {
+        height: 1px;
+        width: 100px;
+        background-color: black;
+        transition: transform 0.3s ease, margin 0.3s ease;
+    }
+
+    .line:first-child {
+        margin-bottom: 7px;
+    }
+
+    .line:first-child.rotateLines {
+        transform: rotate(4deg) translate(0, 1px);
+        margin: 0;
+    }
+    
+    .line:last-child.rotateLines {
+        transform: rotate(-4deg);
+    }
+
+    .mainMenu {
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+        height: 35px;
+    }
+
+    .mainMenu.active {
+        height: 100%;
+    }
+
+    .pages {
+        flex-direction: column;
+        margin: 30px 0;
+    }
+
+    .headerTxt {
+        font-size: 50px;
+    }
+}
+
+/* Стилі main */
+
+.main {
+    padding: 35px 10px;
+}
+
+.plane {
+    display: flex;
+    align-items: center;
+}
+
+.planeSvg {
+    margin-right: 10px;
+}
+
+.dashLine {
+    border-top: 2px dashed black;
+    width: 100%;
+}
+
+.ticketBoxTxtContainer,
+.cardBoxTxtContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 35px 0;
+    word-wrap: break-word;
+}
+
+.orangeCircle {
+    background-color: #F3A522;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.ticketBox {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+
+.ticket {
+    display: flex;
+    max-width: 1380px;
+}
+
+.ticketImg {
+    border-radius: 16px;
+    flex-grow: 3;
+    object-fit: cover;
+    object-position: center;
+    max-width: 50%;
+}
+
+.ticketBarcode {
+    background-color: #F3A522;
+    border-radius: 16px 0 0 16px;
+    flex-grow: 1;
+    padding: 0 10px;
+    align-content: center;
+}
+
+.ticketNumber {
+    background-color: #ECEBE9;
+    border-radius: 0 16px 16px 0;
+    flex-grow: 1;
+    padding: 10px 10px 0;
+}
+
+.ticketTxt {
+    height: 273px;
+    background-color: #ECEBE9;
+    border-radius: 16px;
+    min-width: 190px;
+    padding: 10px 10px 0;
+}
+
+.ticketTxtContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    height: 100%;
+}
+
+.cardBox {
+    display: flex;
+    gap: 45px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.card {
+    width: 310px;
+    height: 580px;
+    background-color: #ECEBE9;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    gap: 20px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    background-color: #F3A522;
+}
+
+.card:hover .exploreBtn {
+    background-color: #F3A522;
+    color: white;
+}
+
+.card:hover .circle {
+    background-color: black;
+    transform: rotate(-45deg);
+}
+
+.card:hover .arrowSvg {
+    fill: orange;
+}
+
+.cardHeader {
+    align-self: center;
+}
+
+.cardImg {
+    width: 280px;
+    height: 380px;
+    align-self: center;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bgColorGrey {
+    background-color: #ECEBE9;
+}
+
+.bgColorBlack {
+    background-color: black;
+}
+
+.fillGrey {
+    fill: #ECEBE9;
+}
+
+.responsiveWidth {
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .ticket {
+        display: grid;
+        grid-template-columns: 1fr 1fr 3fr;
+        justify-items: center; /* Вирівнює по горизонталі */
+        align-items: center; /* Вирівнює по вертикалі */
+        max-width: 609px;
+    }
+
+    .ticketImg {
+        grid-column: 1/4;
+        grid-row: 1/1;
+        max-width: 100%;
+    }
+
+    .ticketBarcode {
+        grid-column: 1/1;
+        grid-row: 2/2;
+        height: 100%;
+        width: 100%;
+    }
+
+    .ticketNumber {
+        grid-column: 2/2;
+        grid-row: 2/2;
+        height: 100%;
+        width: 100%;
+    }
+
+    .ticketTxtContainer {
+        grid-column: 3/3;
+        grid-row: 2/2;
+        height: 100%;
+    }
+
+    .ticketBoxHeader,
+    .cardBoxHeader {
+        font-size: 25px;
+    }
+
+    .orangeCircle {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .cocktailSvg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* Стилі footer */
+
+.footer {
+    background-color: #F3A522;
+    padding: 30px 10px 80px 10px;
+}
+
+.footerHeader {
+    margin-bottom: 10px;    
+}
+
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.subscribeInputContainer {
+    display: flex;
+    margin: 50px 0 10px 0;
+}
+
+.emailSubscription {
+    background-color: #F3A522;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    flex-grow: 1;
+    max-width: 700px;
+    width: 100%;
+}
+
+.emailSubscription::placeholder {
+    color: black;
+    opacity: 0.7;
+}
+
+.subscribeBtn {
+    height: 35px;
+    width: 128px;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: #F3A522;
+    padding: 0 10px;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+}
+
+.subscribeBtn:hover {
+    border: 1px solid black;
+    background-color: #F3A522;
+    color: black;
+}
+
+.linksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 450px;
+    width: 100%;
+}
+
+.pagesLinks,
+.otherLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subscribeCheckbox {
+    margin-right: 10px;
+}
+
+@media (max-width: 750px) {
+    .footerContainer {
+        flex-wrap: wrap;
+    }
+
+    .subscribeForm {
+        flex-grow: 1;
+        width: 100%;
+    }
+}

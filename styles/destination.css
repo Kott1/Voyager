@@ -1,0 +1,409 @@
+/* Загальні стилі */
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Helvetica';
+    color: black;
+}
+
+input::placeholder {
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+.container {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.exploreBtn {
+    height: 35px;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px 0 10px;
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.exploreBtn:hover {
+    background-color: orange;
+    color: black;
+}
+
+.exploreBtn:hover .circle {
+    background-color: black;
+    transform: rotate(-45deg);
+}
+
+.exploreBtn:hover .arrowSvg {
+    fill: orange;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.arrowSvg {
+    right: 5px;
+    position: absolute;
+    transition: fill 0.3s ease;
+}
+
+.footerHeader {
+    font-size: 35px;
+}
+
+/* Стилі header */
+
+.arrowSvg {
+    right: 5px;
+    position: absolute;
+}
+
+.header {
+    width: 100%;
+    align-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+    position: fixed;
+    top: 30px;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1380px;
+    align-items: flex-start;
+}
+
+.mainMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: #ECEBE9;
+    border-radius: 16px;
+    flex-grow: 2;
+    padding: 7px 10px;
+}
+
+.pages {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.currencyBtn {
+    padding: 7px 18px;
+    height: 35px;
+    background-color: #F3A522;
+    border: none;
+    border-radius: 16px;
+    font-family: 'Helvetica';
+    font-size: 18px;
+    color: black;
+    outline: none;
+}
+
+.currencyBtn option {
+    font-family: 'Helvetica';
+    font-size: 18px;
+    color: black;
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.burgerMenu {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    .menu {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: flex;
+        gap: 15px;
+        position: fixed;
+        top: 30px;
+        z-index: 1000;
+        width: 100%;
+        max-width: 1380px;
+        align-items: flex-start;
+    }
+
+    .menuIcon {
+        width: 100%;
+        height: 9px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .menuIcon.toggleMargin {
+        margin: 13px 0 30px;
+    }
+
+    .line {
+        height: 1px;
+        width: 100px;
+        background-color: black;
+        transition: transform 0.3s ease, margin 0.3s ease;
+    }
+
+    .line:first-child {
+        margin-bottom: 7px;
+    }
+
+    .line:first-child.rotateLines {
+        transform: rotate(4deg) translate(0, 1px);
+        margin: 0;
+    }
+    
+    .line:last-child.rotateLines {
+        transform: rotate(-4deg);
+    }
+
+    .mainMenu {
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+        height: 35px;
+    }
+
+    .mainMenu.active {
+        height: 100%;
+    }
+
+    .pages {
+        flex-direction: column;
+        margin: 30px 0;
+    }
+}
+
+/* Стилі main */
+
+.main {
+    padding: 0 10px;
+    height: 100vh;
+    align-content: center;
+}
+
+.destinationContainer {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+}
+
+.destinationHeaderContainer {
+    display: flex;
+}
+
+.destinationHeader {
+    font-size: 80px;
+    padding: 15px;
+    background-color: #ECEBE9;
+    border-radius: 16px 16px 0 0;
+}
+
+.destinationHeader:first-child {
+    flex-grow: 1;
+}
+
+.destinationHeader:last-child {
+    background-color: #F3A522;
+}
+
+.destinationInfo {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.destinationTxt {
+    max-width: 1135px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.destinationBtnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.backBtn {
+    height: 35px;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px 0 10px;
+    background-color: #F3A522;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+.backBtn:hover .circle {
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+.backBtn:hover .arrowSvg {
+    fill: black;
+}
+
+.rotate180 {
+    rotate: 180deg;
+}
+
+.fillOrange {
+    fill: #F3A522;
+}
+
+.bgColorBlack {
+    background-color: black;
+}
+
+@media (max-width: 750px) {
+    .destinationHeader {
+        font-size: 35px;
+    }
+
+    .destinationInfo {
+        flex-direction: column;
+    }
+}
+/* Стилі footer */
+
+.footer {
+    background-color: #F3A522;
+    padding: 30px 10px 80px 10px;
+}
+
+.footerHeader {
+    margin-bottom: 10px;    
+}
+
+.footerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+
+.subscribeInputContainer {
+    display: flex;
+    margin: 50px 0 10px 0;
+}
+
+.emailSubscription {
+    background-color: #F3A522;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    flex-grow: 1;
+    max-width: 700px;
+    width: 100%;
+}
+
+.emailSubscription::placeholder {
+    color: black;
+    opacity: 0.7;
+}
+
+.subscribeBtn {
+    height: 35px;
+    width: 128px;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+    color: #F3A522;
+    padding: 0 10px;
+    flex-grow: 1;
+    transition: all 0.3s ease;
+}
+
+.subscribeBtn:hover {
+    border: 1px solid black;
+    background-color: #F3A522;
+    color: black;
+}
+
+.linksContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 450px;
+    width: 100%;
+}
+
+.pagesLinks,
+.otherLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subscribeCheckbox {
+    margin-right: 10px;
+}
+
+@media (max-width: 750px) {
+    .footerContainer {
+        flex-wrap: wrap;
+    }
+
+    .subscribeForm {
+        flex-grow: 1;
+        width: 100%;
+    }
+}

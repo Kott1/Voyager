@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyager</title>
+    <link rel="stylesheet" href="../styles/bookATrip.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <div class="mainMenu">
+                    <a href="voyager.html">Voyager</a>
+                    <div class="pages">
+                        <a href="destinations.html">Explore Destinations</a>
+                        <a href="bookATrip.html">Book a Trip</a>
+                    </div>
+                </div>
+                <select class="currencyBtn">
+                    <option value="EUR" selected>EUR</option>
+                    <option value="UAH">UAH</option>
+                </select>
+                <button class="exploreBtn flexGrow" onclick="window.location.href='file:///C:/Users/User/%D0%9A%D0%9F%D0%86/3%20%D0%BA%D1%83%D1%80%D1%81%201%20%D1%81%D0%B5%D0%BC%D0%B5%D1%81%D1%82%D1%80/%D0%92%D0%B5%D0%B1/html/destinations.html';">EXPLORE
+                    <div class="circle">
+                        <svg class="arrowSvg" width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                            <path d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834
+                            21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858
+                            13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"></path>
+                        </svg>
+                    </div>                               
+                </button>
+            </nav>
+            <nav class="burgerMenu">
+                <div class="mainMenu">
+                    <div class="menuIcon">
+                        <div class="line"></div>
+                        <div class="line"></div>        
+                    </div>
+                    <div class="hidden">
+                        <a class="menuLinks" href="voyager.html">Voyager</a>
+                        <div class="pages">
+                            <a class="menuLinks" href="destinations.html">Explore Destinations</a>
+                            <a class="menuLinks" href="bookATrip.html">Book a Trip</a>
+                        </div>
+                    </div>
+                </div>
+                <select class="currencyBtn">
+                    <option value="EUR" selected>EUR</option>
+                    <option value="UAH">UAH</option>
+                </select>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="formHeaderContainer">
+                <div class="orangeCircle">
+                    <svg class="headphonesSvg" fill="#000000" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 363.815 363.815">
+                        <path d="M317.504,156.35c0.385-1.329,0.401-2.729,0.401-4.181v-15.546c0-36.782-13.888-71.165-39.472-96.812 C252.826,14.139,218.574,0,181.805,0c-36.77,
+                        0-70.871,14.139-96.479,39.811C59.743,65.458,45.905,99.84,45.905,136.623v15.546 c0,1.453,0.016,2.852,0.401,4.181C22.862,158.208,4.13,183.206,4.13,213.675c0,
+                        30.607,18.743,55.701,42.335,57.359 c6.307,8.499,16.481,13.663,27.314,13.663c18.832,0,34.127-15.331,34.127-34.175v-73.694c0-18.258-14-33.218-32-34.131v-6.074
+                        C75.905,76.834,122.24,30,181.906,30c59.665,0,105.999,46.834,105.999,106.623v6.074c-18,0.916-32,15.875-32,34.131v73.694 c0,12.325,6.556,23.144,16.36,
+                        29.157c-11.172,16.436-26.875,29.44-45.461,37.375c-5.086-5.667-12.461-9.24-20.657-9.24h-38.484 c-15.306,0-27.758,12.452-27.758,27.758v0.484c0,15.306,
+                        12.452,27.758,27.758,27.758h38.484c11.261,0,20.97-6.744,25.319-16.402 c18.377-6.683,35.165-17.281,49.297-31.378c10.526-10.499,19.109-22.47,
+                        25.577-35.473c4.312-2.328,8.113-5.558,11.059-9.527 c23.591-1.662,42.285-26.754,42.285-57.359C359.684,183.204,340.952,158.206,317.504,156.35z"></path>
+                    </svg>
+                </div>
+                <h1 class="formHeader">Fill the Form to Book a Trip</h1>
+            </div>
+            <form action="" class="bookATripForm">
+                <div class="inputContainer">
+                    <div class="inputColumn">
+                        <input class="formInput" type="text" placeholder="Full Name *">
+                        <input class="formInput" type="text" placeholder="Phone *">
+                        <select class="formInput" name="" id="destinations">
+                            <option value="" disabled selected>Choose a Destination *</option>
+                            <option value="paris">PARIS</option>
+                            <option value="palermo">PALERMO</option>
+                            <option value="seoul">SEOUL</option>
+                            <option value="marseille">MARSEILLE</option>
+                            <option value="bangkok">BANGKOK</option>
+                            <option value="varanasi">VARANASI</option>
+                            <option value="tokyo">TOKYO</option>
+                            <option value="francisco">FRANCISCO</option>
+                            <option value="tuscany">TUSCANY</option>
+                            <option value="rio">RIO</option>
+                            <option value="cape">CAPE</option>
+                            <option value="bali">BALI</option>
+                        </select>
+                    </div>
+                    <div class="inputColumn">
+                        <input class="formInput" type="email" placeholder="Email *">
+                        <select class="formInput" name="" id="people">
+                            <option value="" disabled selected>Amount of People *</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="preferredDates">
+                    <label for="start-date">From:</label>
+                    <input class="formDateInput" type="date" id="start-date" name="start-date">
+                    
+                    <label for="end-date">To:</label>
+                    <input class="formDateInput" type="date" id="end-date" name="end-date">
+                </div>
+                <textarea class="formArea" name="" id="" placeholder="Additional notes"></textarea>
+                <div class="formBtnContainer">
+                    <p onclick="handleCurrencyChange()" class="totalAmount">Total Amount: </p>
+                    <button class="formBtn">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footerLogo">Voyager Travel Agency</p>
+            <div class="footerContainer">
+                <form class="subscribeForm" action="" method="post">
+                    <h1 class="footerHeader">Get exclusive updates</h1>
+                    <h1 class="footerHeader">Subscribe to our newsletter</h1>
+                    <p>Sign up to our newsletter to receive the latest travel updates.</p>
+                    <div class="subscribeInputContainer">
+                        <input class="emailSubscription" type="email" name="" id="" placeholder="Email *">
+                        <button class="subscribeBtn">SUBSCRIBE</button>
+                    </div>
+                    <input class="subscribeCheckbox" type="checkbox" name="" id="">By subscribing, you agree to our Privacy Policy.
+                </form>
+                <div class="pagesLinks">
+                    <a href="voyager.html">Voyager</a>
+                      <a href="destinations.html">Explore Destinations</a>
+                    <a href="bookATrip.html">Book a Trip</a>
+                </div>
+                <div class="otherLinks">
+                    <a href="#">FAQ</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Youtube</a>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/calculateAmount.js"></script>
+</body>
+</html>
